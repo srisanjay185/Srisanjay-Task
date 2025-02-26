@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOGO Offer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ---------------Functions ---------------------- -->
+
+    <script>
+        function offerDetails(id, element) {
+            document.querySelectorAll('.details').forEach(detail => detail.style.display = 'none');
+            document.querySelectorAll('.box').forEach(box => box.classList.remove('active'));
+
+            document.getElementById(id).style.display = 'block';
+            element.classList.add('active');
+
+            let radio = element.querySelector('input[type="radio"]');
+            radio.checked = true;
+            priceUpdate(radio);
+        }
+
+        function priceUpdate(radio) {
+            document.getElementById('total').innerText = radio.value;
+        }
+    </script>
+
+    <!-- -----------------------outline ------------------------ -->
+
+    <div class="total">
+        <div>
+            <hr width="25%" style="display: inline-block; margin-right: 10px;">
+            <h3 style="display: inline-block; color: #f0748d;">YAY! It's BOGO</h3>
+            <hr width="25%" style="display: inline-block;  margin-left: 10px;">
+        </div>
+
+
+        <!--  ----------------------------- Box 1 --------------------------- -->
+
+
+        <div class="box" onclick="offerDetails('one', this)">
+            <input type="radio" name="unit" value="10" onchange="priceUpdate(this)">
+            <strong>1 Unit</strong> <span id="offer"> 10% Off </span>
+            <b class="price">$10.00 USD
+                <br>
+                <strike id="strike">$20.00 USD</strike></b>
+            <div class="details" id="one">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Size</th>
+                        <th>Color</th>
+                    </tr>
+                    <tr>
+                        <td>#1</td>
+                        <td><select name="" id="">
+                                <option value="">S</option>
+                                <option value="">M</option>
+                                <option value="">L</option>
+                                <option>XL</option>
+                            </select>
+                        </td>
+                        <td><select name="" id="">
+                                <option value="">Black</option>
+                                <option value="">Blue</option>
+                                <option value="">Green</option>
+                                <option value="">Red</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#2</td>
+                        <td><select name="" id="">
+                                <option value="">S</option>
+                                <option value="">M</option>
+                                <option value="">L</option>
+                                <option>XL</option>
+                            </select>
+                        </td>
+                        <td><select name="" id="">
+                                <option value="">Black</option>
+                                <option value="">Blue</option>
+                                <option value="">Green</option>
+                                <option value="">Red</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <!--  ----------------------------- Box 2 --------------------------- -->
+
+
+        <div class="box" onclick="offerDetails('two', this)">
+            <input type="radio" name="unit" value="18" onchange="priceUpdate(this)">
+            <strong>2 Unit</strong> <span id="offer"> 20% Off </span> <b class="price">$18.00 USD
+                <br>
+                <strike id="strike">$30.00 USD</strike></b>
+            <div class="details" id="two">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Size</th>
+                        <th>Color</th>
+                    </tr>
+                    <tr>
+                        <td>#1</td>
+                        <td><select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </td>
+                        <td><select>
+                                <option value="">Black</option>
+                                <option value="">Blue</option>
+                                <option value="">Green</option>
+                                <option value="">Red</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>#2</td>
+                        <td>
+                            <select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="">Black</option>
+                                <option value="">Blue</option>
+                                <option value="">Green</option>
+                                <option value="">Red</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <!--  ----------------------------- Box 3 --------------------------- -->
+
+
+        <div class="box" onclick="offerDetails('three', this)">
+            <input type="radio" name="unit" value="24" onchange="priceUpdate(this)">
+            <strong>3 Unit</strong> <span id="offer"> 30% Off </span> <b class="price">$24.00 USD<br>
+                <strike id="strike">$40.00 USD</strike></b>
+            <div class="details" id="three">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Size</th>
+                        <th>Color</th>
+                    </tr>
+                    <tr>
+                        <td>#1</td>
+                        <td><select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </td>
+                        <td><select>
+                                <option value="">Black</option>
+                                <option value="">Blue</option>
+                                <option value="">Green</option>
+                                <option value="">Red</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#2</td>
+                        <td><select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </td>
+                        <td><select>
+                                <option>Black</option>
+                                <option>White</option>
+                                <option>Red</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <p>
+            <b style="margin-right: 8rem; color: #f0748d; ">Free Delivery</b><strong>Total: $<span id="total">0</span>
+                USD</strong>
+        </p>
+        <button class="button">+ Add to Cart</button>
+        <address style="color: gray; font-size: 15px; margin-left: 50%; margin-top: 10px;">@Powered by Pumper</address>
+
+    </div>
+
+
+</body>
+
+</html>
