@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.total {
+    width: 25%;
+    margin-top: 5%;
+    box-shadow: 0 0 10px gray;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.box {
+    border: 1px solid #f0748d;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.box.active {
+    border: 2px solid #f0748d;
+    background: #fff0f5;
+}
+
+#offer {
+    background:#FF708D;
+    font-size: 12px;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+.price {
+    margin-left: 6rem;
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+}
+
+th {
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+td {
+    padding: 5px 5px;
+}
+
+select {
+    border-radius: 10px;
+    width: 60%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    
+}
+
+#strike {
+    margin-left: 68%;
+    color: rgb(154, 153, 153);
+    font-size: 13px;
+}   
+
+.button {
+    background:#f0748d;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
